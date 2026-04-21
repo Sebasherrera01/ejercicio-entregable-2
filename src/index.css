@@ -1,68 +1,61 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@300;400;500;600;700&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-gray-900 text-white;
+    font-family: "Inter", sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", sans-serif;
+    @apply font-bold;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  button {
+    @apply cursor-pointer border-none bg-none;
+  }
 }
 
-body {
-  background-color: #0a0a0a;
-  color: #ffffff;
-  font-family: "Inter", sans-serif;
-}
+@layer components {
+  .urban-gradient {
+    @apply bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-}
+  .product-card {
+    @apply transition-all duration-300;
+  }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+  .product-card:hover {
+    @apply -translate-y-1;
+  }
 
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-}
+  .nav-link {
+    @apply relative transition-all duration-300;
+  }
 
-/* Estilos globales */
-.urban-gradient {
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-}
+  .nav-link::after {
+    content: "";
+    @apply absolute bottom-[-5px] left-1/2 h-0.5 w-0 -translate-x-1/2 bg-amber-400 transition-all duration-300;
+  }
 
-.product-card {
-  transition: all 0.3s ease;
-}
+  .nav-link:hover::after {
+    @apply w-full;
+  }
 
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
-.nav-link {
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -5px;
-  left: 50%;
-  background-color: #f59e0b;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-.hero-text {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  .hero-text {
+    @apply text-shadow;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
 }
