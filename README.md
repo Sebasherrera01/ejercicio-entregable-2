@@ -1,18 +1,26 @@
-# React + Vite
+# Urban Threads - Migración a React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
+Migración completa de Urban Threads a React con react-router-dom, Tailwind CSS y componentes reutilizables.
 
-Currently, two official plugins are available:
+## Estructura
+- src/Components/ - Componentes reutilizables
+- src/Pages/ - Páginas principales
+- src/Assets/ - Recursos
+- src/Helpers/ - Funciones auxiliares
+- src/Services/ - Llamadas a APIs
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Cómo ejecutar
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Requisitos cumplidos
+✅ Fidelidad visual
+✅ Arquitectura con encarpetado
+✅ Enrutamiento con react-router-dom
+✅ 5+ componentes
+✅ Convenciones PascalCase/camelCase
+✅ Formulario funcional con localStorage
+✅ Commits descriptivos
